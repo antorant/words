@@ -1,0 +1,10 @@
+$base: 40px;
+
+body {
+  max-width: $base * 16;
+  padding: $base / 2;
+  margin: 0 auto;
+
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+}

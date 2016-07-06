@@ -1,0 +1,32 @@
+<html>
+  <head>
+
+    <script src="js/lib/markdown.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <script>
+function renderContent(data){
+  var html = markdown.toHTML(data)
+  document.getElementById('content').innerHTML = html
+}
+
+var hash = window.location.hash
+console.log(hash)
+
+var client = new XMLHttpRequest();
+client.open('GET', 'content/160629-design-process.txt')
+client.onreadystatechange = function() {
+  if (client.readyState == 4 && client.status == 200) {
+    //console.log(client.responseText);
+    renderContent(client.responseText)
+  }
+}
+client.send()
+
+    </script>
+  </body>
+</html>

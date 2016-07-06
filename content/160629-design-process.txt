@@ -1,0 +1,84 @@
+# U and I
+
+An approach to building a digital user interface - a combination of process and materials, design and implementation.
+
+Quality, consistency, efficiency.
+
+## Ingredients
+There are five parts:
+
+1 User Flow
+2 Wireframes (better name?)
+3 Design System
+4 Interaction Detail (better name?)
+5 Review
+
+They are not strictly chronological - parts 4 and 5 often occur as simultaneous incremental processes.
+
+###### 1. User Flow
+*Flowchart*
+Maps the user journey and provides an overview of the feature. Defines states and decision points for user and application.
+
+###### 2. Wireframes
+*Images, click demos*
+Basic layout and content designs which correspond to application states in the User Flow.
+
+###### 3. Design System
+*Images, code*
+An evolving collection of visual aspects and components, which can be applied to the wireframes to form the design.
+
+###### 4. Interaction Detail
+*Wireframes, discussion*
+Defines small behaviours and interactions specific to the feature or new components, which are not already covered by the Visual Design System.
+
+###### 5. Review
+*Discussion, revisions*
+Final implementation is checked and any necessary changes made. Visual Design System is updated if necessary.
+
+
+
+## About The Visual Design System
+
+The Visual Design System is a language and a library.
+
+The system exists synchronously in reference documents and code.
+
+##### Language: visual aspects
+
+The language is the underlying visual aspects of the design.  Colours, shapes, typefaces, text sizes and units of measurement. We use as few as is practical. The language forms the ingredients from which Components are built.
+
+##### Library: components
+
+Components are modular, functional parts. The wheels on the bus. They often correspond to standard HTML elements, like headers or input fields, but are also product specific - track lists or audio control buttons.
+
+Components should be distinctive from each other, and consistent in appearance and functionality. “Play” buttons should look, and behave, like each other.
+
+Components with related functionality or meaning are grouped with shared characteristics, such as a specific colour or text style. Round audio controls; names in bold.
+
+
+
+
+
+
+
+## Advantages of this process
+
+- The process eliminates the need for screen designs, which are time-consuming for designers and introduce a layer of abstraction between designers and developers.
+
+- Designers can continuously manage the design in a holistic and modular fashion. Visual discrepencies which naturally occur over the development of a large application are kept to a minimum.
+
+- Developers can build the bulk of a new feature from existing components. Speed is increased and duplication is inherently avoided.
+
+- If the process works, developers require little input from designers after the initial feature planning stage (User Flow and Wireframes).
+
+## Considerations
+
+- Designers must make thoughtful decisions in the development of the Visual Design System. Small changes become far-reaching as the application grows. They should also be adaptive and prepared to correct their decisions when necessary.
+
+- Designers must also ensure that their work is as comprehensive as possible, so that Developers have all the resources they need to implement the designs.
+
+- Developers must understand and respect the underlying principles of the Visual Design System. Decisions made quickly in the process of development are easily forgotten and sometimes go unnoticed.
+
+- The process of implementation is heavily reliant on communication. Discussion should take place frequently and openly. Questions and misunderstandings should be resolved as quickly as possible.
+
+-  Normally, screen designs provide a tangible way for a feature to be presented to, and signed off by, higher level team members. The absence of them demands trust and communication between designers, product owners and project leaders.
