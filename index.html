@@ -1,6 +1,5 @@
 <html>
   <head>
-
     <script src="js/lib/markdown.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
@@ -9,24 +8,32 @@
     <div id="content"></div>
 
     <script>
+// Render the loaded content
 function renderContent(data){
+  // convert markdown to html
   var html = markdown.toHTML(data)
+
+  // render in content area
   document.getElementById('content').innerHTML = html
 }
 
-var hash = window.location.hash
-console.log(hash)
-
-var client = new XMLHttpRequest();
-client.open('GET', 'content/160629-design-process.txt')
-client.onreadystatechange = function() {
-  if (client.readyState == 4 && client.status == 200) {
-    //console.log(client.responseText);
-    renderContent(client.responseText)
+// load the content
+function loadContent(hash) {
+  var request = new XMLHttpRequest();
+  request.open('GET', 'content/'+hash+'.txt')
+  request.onreadystatechange = function() {
+    if (request.readyState == 4 && request.status == 200) {
+      renderContent(request.responseText)
+    }
   }
+  request.send()
 }
-client.send()
 
+// detech hash in url
+if (window.location.hash != ''){
+  var hash = window.location.hash.replace('#','')
+  loadContent(hash)
+}
     </script>
   </body>
 </html>
